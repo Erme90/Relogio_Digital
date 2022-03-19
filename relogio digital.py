@@ -1,6 +1,7 @@
 from tkinter import *
 import pyglet
 from datetime import datetime
+from datetime import date
 
 pyglet.font.add_file('ninepin.ttf')
 pyglet.font.add_file('digital-7.ttf')
@@ -27,12 +28,11 @@ def relogio():
     data.configure(text=semana + ' - ' + str(dia)+ '/' + str(mes)
     + '/'+ str(ano))
     
-
-horario = Label(janela,text='23:36:00', font=('ninepin 20'), 
-          bg=corback,fg=corfoot)
+horario = Label(janela,text='23:36:00', font=('ninepin 20' or 'Arial 20'), 
+    bg=corback,fg=corfoot)
 horario.grid(row=0, column=0, padx=10, pady=7, sticky=NW)
 
-data = Label(janela,text='Friday - 18/03/2022', font=('ninepin 12'), bg=corback, fg=corfoot)
+data = Label(janela,text='Friday - 18/03/2022', font=('ninepin 12' or 'Arial 12'), bg=corback, fg=corfoot)
 data.grid(row=1, column=0,padx=10, sticky=NW)
 relogio()
 janela.mainloop()
