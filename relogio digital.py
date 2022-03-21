@@ -1,7 +1,10 @@
 from tkinter import *
 import pyglet
+import locale
 from datetime import datetime
 from datetime import date
+
+locale.setlocale(locale.LC_TIME, 'pt_BR.utf8')
 
 pyglet.font.add_file('ninepin.ttf')
 pyglet.font.add_file('digital-7.ttf')
